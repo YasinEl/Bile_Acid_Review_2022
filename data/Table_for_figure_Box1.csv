@@ -1,0 +1,43 @@
+name,specimen,concentration_mean,concentration_min,concentration_max
+Taurocholic acid,Bile,9910,9600,10220
+Taurocholic acid,Blood,0.24,0.0420101012677667,0.58
+Glycocholic acid,Blood,0.513333333333333,0.02,1.9
+Chenodeoxycholic acid,Bile,5530,5400,5660
+Chenodeoxycholic acid,Blood,1.0825,0.2,2.2
+Coprocholic acid,Blood,0.05,0,0.120710678118655
+Cholic acid,Bile,32060,31830,32280
+Cholic acid,Blood,0.84,0,2
+Deoxycholic acid,Bile,11720,11570,11860
+Deoxycholic acid,Blood,0.45,0.22,0.92
+Deoxycholic acid glycine conjugate,Bile,0.01,0.01,0.01
+Chenodeoxycholic acid glycine conjugate,Bile,0.01,0.01,0.01
+Chenodeoxycholic acid glycine conjugate,Blood,0.68,0,1.55681240867132
+Lithocholic acid glycine conjugate,Bile,620,590,650
+Lithocholic acid glycine conjugate,Blood,0.009,0.005,0.015
+Glycoursodeoxycholic acid,Blood,0.145,0,0.7
+Lithocholyltaurine,Bile,370,350,380
+Lithocholyltaurine,Blood,1.212,0.366300289700889,2.05769971029911
+Lithocholic acid,Bile,930,890,960
+Lithocholic acid,Blood,0.205,0.0282233047033631,0.381776695296637
+Tauroursodeoxycholic acid,Blood,2,0.1,4
+Taurodeoxycholic acid,Bile,0.01,0.01,0.01
+Taurodeoxycholic acid,Blood,0.062,0,0.177
+Sulfolithocholic acid,Blood,1.6,1.5,1.7
+Ursodeoxycholic acid,Blood,0.16,0.13,0.19
+Taurochenodesoxycholic acid,Bile,0.01,0.01,0.01
+Taurochenodesoxycholic acid,Blood,0.3,0.1,0.38
+Chenodeoxycholic acid 3-sulfate,Blood,0.1,0,1
+Sulfolithocholylglycine,Blood,0.06,0.05,0.07
+Ursodeoxycholic acid 3-sulfate,Blood,19.095,0,57
+"3beta,7alpha-Dihydroxy-5-cholestenoate",Blood,0.1,0.1,0.1
+Deoxycholic acid glycine conjugate,Blood,0,,
+Glycocholic acid,Bile,0,,
+Coprocholic acid,Bile,0,,
+Glycoursodeoxycholic acid,Bile,0,,
+Tauroursodeoxycholic acid,Bile,0,,
+Sulfolithocholic acid,Bile,0,,
+Ursodeoxycholic acid,Bile,0,,
+Chenodeoxycholic acid 3-sulfate,Bile,0,,
+Sulfolithocholylglycine,Bile,0,,
+Ursodeoxycholic acid 3-sulfate,Bile,0,,
+"3beta,7alpha-Dihydroxy-5-cholestenoate",Bile,0,,
