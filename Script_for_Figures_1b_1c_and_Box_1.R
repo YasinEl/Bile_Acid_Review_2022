@@ -21,7 +21,9 @@ library(ggforce)
 #Generate Figure 1b
 #####################
 dt = fread("Table_for_figures_1b_and_1c.csv")
-dbs_li = list(HMDB = dt[DB == "HMDB"]$SMILES, LIPIDMAPS = dt[DB == "LIPIDMAPS"]$SMILES, BILELIB19 = dt[DB == "BILELIB19"]$SMILES)
+dbs_li = list(HMDB = unique(dt[DB == "HMDB" & BA_type != '']$SMILES), 
+              LIPIDMAPS = unique(dt[DB == "LIPIDMAPS" & BA_type != '']$SMILES), 
+              BILELIB19 = unique(dt[DB == "BILELIB19" & BA_type != '']$SMILES))
 
 ggVennDiagram(dbs_li, label_alpha = 0)  +
   scale_fill_gradientn(colours = c('#8EBAD9', '#EA9293')) + 
@@ -48,15 +50,25 @@ ggplot(dt) +
 #Generate Figure Box1
 #####################
 dt = fread("Table_for_figure_Box1.csv")
+dt_points = fread("Table_for_figure_Box1_2.csv")
 
-ggplot(dt, aes(x = reorder(as.factor(name), concentration_mean), y = concentration_mean, fill = specimen)) +
-  geom_bar(stat="identity", position= position_dodge(preserve = "single")) +
+ggplot(dt, aes(x = reorder(as.factor(name_values), concentration_mean), y = concentration_mean, fill = specimen)) +
+  geom_bar(stat="identity", position=position_dodge(preserve = "single")) +
   theme_classic() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1), text = element_text(size = 10)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  theme(text = element_text(size = 10)) +
   scale_fill_manual(values=c('#8EBAD9', '#EA9293')) +
   labs(fill = "") +
   xlab('HMDB name') +
   ylab('Concentration (micromol/L)') + 
-  geom_errorbar(aes(ymin=concentration_min, ymax=concentration_max), lwd = .02, width=.2, position=position_dodge(.9, preserve = "single")) +
-  facet_zoom(ylim = c(0,60), zoom.size = 1)
+  geom_errorbar(aes(ymin=concentration_min, 
+                    ymax=concentration_max), 
+                lwd = .02,
+                width=.2,
+                position=position_dodge(.9, preserve = "single")) +
+  geom_jitter(data = dt_points, aes(x = name_values, y = concentration_mean, color = specimen),
+              position = position_jitterdodge(jitter.width = 0.0, dodge.width = 0.9), fill = 'black', size = 1)  +
+  scale_color_manual(values=c('black', 'black')) +
+  facet_zoom(ylim = c(0,30), zoom.size = 1)
+
 
